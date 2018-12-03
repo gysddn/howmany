@@ -1,0 +1,117 @@
+sudo command1
+sudo command1
+sudo command1
+sudo command1
+sudo command1
+sudo command2
+sudo command2
+sudo command2
+sudo command2
+sudo command2
+sudo command2
+sudo command2
+sudo command2
+sudo command2
+sudo command2
+sudo command3
+sudo command3
+sudo command3
+sudo command3
+sudo command3
+sudo command3
+sudo command3
+sudo command3
+sudo command3
+sudo command3
+sudo command3
+sudo command3
+sudo command3
+sudo command3
+sudo command3
+sudo command3
+sudo command3
+sudo command3
+sudo command3
+sudo command3
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+sudo command4
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal
+normal

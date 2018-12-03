@@ -23,14 +23,16 @@ def Main():
 def get_command_list():
     commands = {}
     file = open(os.path.expanduser('~') + "/.bash_history", "r")
+    # debug file
+    #file = open(os.path.expanduser('~') + "/Projects/Python/howmany/tests/test.txt", "r")
     for line in file:
-        try:
-            # In case if there is a space before the command
-            pointer = line.index(" ")
-            command = line[:pointer]
-        except:
-            command = line
-        command = command.replace("\n", " ")
+        command = get_command(line)
+
+        # if command is sudo, ignore it and take the next word
+        if command == "sudo":
+            line = line[5:]
+            command = get_command(line)
+
         if command not in commands:
             commands[command] = 1
         else:
@@ -38,6 +40,18 @@ def get_command_list():
 
     file.close()
     return commands;
+
+def get_command(line):
+    try:
+        # Take the word right before space
+        pointer = line.index(" ")
+        command = line[:pointer]
+    except:
+        command = line
+    command = command.replace("\n", " ")
+    return command
+
+
 
 if __name__ == "__main__":
     Main()
