@@ -9,27 +9,29 @@ parser.add_argument("-n", "--number", type=int, default=10, help="The number of 
 
 args = parser.parse_args()
 
+command_number = 0
+
 def Main():
     # print the commands
-    commands = get_command_list()
+    file = open(os.path.expanduser('~') + "/.bash_history", "r")
+    commands = get_command_list(file)
+
     number = args.number
     i = 0
     for key in sorted(commands, key=commands.__getitem__, reverse=True):
         if i == number:
             break
-        print("%-8s  : %4d" % (key, commands[key]))
+        print("%-12s  : %4d |  %%%6f" % (key, commands[key], 100*(commands[key] / command_number)))
         i +=1
 
-def get_command_list():
-    command_number = 0
+def get_command_list(file):
+    global command_number
     commands = {}
-    file = open(os.path.expanduser('~') + "/.bash_history", "r")
-    command_number += 1
     # debug file
     #file = open(os.path.expanduser('~') + "/Projects/Python/howmany/tests/test.txt", "r")
     for line in file:
         command = get_command(line)
-
+        command_number += 1
         # if command is sudo, ignore it and take the next word
         if command == "sudo":
             line = line[5:]
