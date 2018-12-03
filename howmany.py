@@ -17,12 +17,14 @@ def Main():
     for key in sorted(commands, key=commands.__getitem__, reverse=True):
         if i == number:
             break
-        print(key + ": " + str(commands[key]))
+        print("%-8s  : %4d" % (key, commands[key]))
         i +=1
 
 def get_command_list():
+    command_number = 0
     commands = {}
     file = open(os.path.expanduser('~') + "/.bash_history", "r")
+    command_number += 1
     # debug file
     #file = open(os.path.expanduser('~') + "/Projects/Python/howmany/tests/test.txt", "r")
     for line in file:
@@ -48,7 +50,7 @@ def get_command(line):
         command = line[:pointer]
     except:
         command = line
-    command = command.replace("\n", " ")
+    command = command.replace("\n", "")
     return command
 
 
