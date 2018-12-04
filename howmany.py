@@ -6,6 +6,7 @@ import argparse
 # Define command line arguments
 parser = argparse.ArgumentParser(description="See your favorite bash commands!")
 parser.add_argument("-n", "--number", type=int, default=10, help="The number of commands to print")
+parser.add_argument("-c", "--chart", action="store_true",help="The number of commands to print")
 
 args = parser.parse_args()
 
@@ -21,7 +22,14 @@ def Main():
     for key in sorted(commands, key=commands.__getitem__, reverse=True):
         if i == number:
             break
-        print("%-12s  : %4d |  %%%6f" % (key, commands[key], 100*(commands[key] / command_number)))
+        print("%-12s  : %4d |  %%%6f" % (key, commands[key], 100*(commands[key] / command_number)), end='')
+        if args.chart:
+            chart = " "
+            for j in range(int((commands[key] / command_number) * 100)):
+                chart += '-'
+            print(chart)
+        else:
+            print()
         i +=1
 
 def get_command_list(file):
