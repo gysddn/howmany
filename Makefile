@@ -1,5 +1,5 @@
 install:
-	sudo /bin/cp ./howmany.py /bin/howmany
+	sudo /bin/cp ./howmany.py ${HOME}/.local/bin/howmany
 
 uninstall:
-	sudo rm /bin/howmany
+	sudo rm ${HOME}/.local/bin/howmany
