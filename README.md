@@ -10,4 +10,4 @@ make install
 To uninstall:
 ```
 make uninstall
-`
+```
